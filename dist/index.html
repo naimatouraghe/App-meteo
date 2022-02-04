@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="Description" content="Hello TypeScript" />
+    <link rel="icon" href="./favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Meteo City</title>
+  </head>
+
+  <body>
+    <!-- Main content area-->
+
+    <div class="container-md p-3">
+      <div class="row d-flex align-items-center">
+        <!-- 1ST BLOCK : TEXT + FORM-->
+        <div class="col-md-4 my-3">
+          <h1 class="mb-4 opacity-90" style="color: hsl(218, 81%, 95%)">
+            Meteo City
+          </h1>
+          <h5 class="mb-4 opacity-80" style="color: hsl(218, 81%, 90%)">
+            La méteo en France
+          </h5>
+          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+            Saisir une ville ou utiliser votre position pour découvrir la méteo
+            du jour.
+          </p>
+
+          <div class="form-group">
+            <form>
+              <input
+                type="text"
+                class="form-control rounded-pill"
+                id="inputCity"
+                placeholder="Paris"
+              />
+              <div class="d-grid gap-2 d-md-block">
+                <button
+                  type="submit"
+                  id="search-btn"
+                  class="btn btn-white btn-lg rounded-pill me-3 my-3 opacity-80"
+                  data-ripple-color="hsl(218, 41%, 45%)"
+                  style="background-color: whitesmoke"
+                >
+                  Rechercher
+                </button>
+                <button
+                  type="submit"
+                  id="gps-btn"
+                  class="btn btn-white btn-lg rounded-pill me-3 opacity-80 border-white"
+                  data-ripple-color="hsl(218, 41%, 45%)"
+                  style="color: whitesmoke"
+                >
+                  Utiliser ma position
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- 1ST BLOCK-END: TEXT + FORM-->
+
+        <!-- 2ND BLOCK : METEO CARD-->
+
+        <div class="col-md-8">
+          <div
+            id="card-custom"
+            class="card p-5 text-center shadow-6-strong rounded mb-5 text-black"
+          >
+            <!--Header: Content Area-->
+            <div class="card-header form-group">
+              <h2 class="mb-2 d-flex justify-content-center" id="city"></h2>
+              <p
+                class="mb-1 d-flex justify-content-center"
+                id="description"
+              ></p>
+              <p
+                class="display-1 mb-1 d-flex justify-content-center"
+                id="temp"
+              ></p>
+            </div>
+            <!--Body: API Content Area-->
+            <div class="card-body p-5">
+              <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                  <strong>Temperature minimale:</strong>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                  <span id="temp-min"></span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                  <strong>Temperature maximale:</strong>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                  <span id="temp-max"></span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                  <strong>Taux d'humidité:</strong>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                  <span id="humidity"></span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                  <strong>Vitesse du vent: </strong>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                  <span id="wind"></span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                  <strong>Direction du vent: </strong>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                  <span id="wind-direction"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2ND BLOCK END : METEO CARD-->
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  <script type="text/javascript" src="bundle.min.js"></script></body>
+</html>

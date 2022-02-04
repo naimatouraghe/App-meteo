@@ -1,0 +1,63 @@
+body {
+  background-color: hsl(218, 41%, 15%) !important;
+  background-image: radial-gradient(
+      650px circle at 0% 0%,
+      hsl(218, 41%, 35%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1250px circle at 100% 100%,
+      hsl(218, 41%, 45%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%
+    );
+  background-repeat: no-repeat;
+  background-position: cover;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-custom {
+  background: hsla(0, 0%, 100%, 0.15);
+  box-shadow: 0 3px 8px 0 rgba(189, 184, 184, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.tool {
+  display: none;
+}
+
+/*.container {
+  position: relative;
+}
+
+.card-wrapper .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-bottom: 6px solid #4285f4;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgb(1, 1, 1 / 15%);
+}
+
+.card-wrapper .card-header {
+  background: #4285f4;
+  width: 100%;
+  font-size: 1.6em;
+}
+*/
